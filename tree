@@ -1,3 +1,29 @@
-cd /path/to/your/flutter/project
-git init
-git add .
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Tooltip Misol'),
+        ),
+        body: Center(
+          child: Tooltip(
+            message: 'Bu tugma!',
+            child: ElevatedButton(
+              onPressed: () {
+                // Tugma bosilganda bajariladigan kod
+              },
+              child: Text('Bos'),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
